@@ -6,9 +6,9 @@ import json
 import math
 import os
 
-print("VOIDX CORTEX: Igniting Semantic Vision Matrix...")
+print("3D_Autorigger_mediapipe: Igniting Semantic Vision Matrix...")
 
-# 1. Initialize the "Dumb" Sensor (MediaPipe)
+# 1. Initialize the MediaPipe ...
 mp_holistic = mp.solutions.holistic
 holistic = mp_holistic.Holistic(
     static_image_mode=True, 
@@ -17,10 +17,10 @@ holistic = mp_holistic.Holistic(
     min_detection_confidence=0.5
 )
 
-# 2. Load the AI Blob
+# 2. Load the 3D model
 mesh = o3d.io.read_triangle_mesh("male_t_pose.glb")
 mesh.compute_vertex_normals()
-mesh.paint_uniform_color([0.9, 0.8, 0.7]) # Skin tone hack
+mesh.paint_uniform_color([0.9, 0.8, 0.7]) # Skin tone 
 
 vis = o3d.visualization.Visualizer()
 vis.create_window(visible=False, width=1024, height=1024)
@@ -29,7 +29,7 @@ vis.add_geometry(mesh)
 opt = vis.get_render_option()
 opt.background_color = np.asarray([0.0, 0.0, 0.0])
 
-# --- THE ORTHOGRAPHIC CAMERA HACK ---
+# --- THE ORTHOGRAPHIC CAMERA ---
 ctr = vis.get_view_control()
 bbox = mesh.get_axis_aligned_bounding_box()
 mesh_center = bbox.get_center()
@@ -50,10 +50,10 @@ fy = params.intrinsic.intrinsic_matrix[1, 1]
 scale_factor = 20.0
 params.intrinsic.set_intrinsics(1024, 1024, fx * scale_factor, fy * scale_factor, 512.0, 512.0)
     # --- FIX START ---
-    # 1. Create a writable copy of the matrix
+    # 1. Creating a writable copy of the matrix
 new_extrinsic = params.extrinsic.copy()
     
-    # 2. Modify the copy (scale the translation components)
+    # 2. Modifying the copy (scale the translation components)
 new_extrinsic[0, 3] *= scale_factor
 new_extrinsic[1, 3] *= scale_factor
 new_extrinsic[2, 3] *= scale_factor
@@ -65,7 +65,7 @@ ctr.convert_from_pinhole_camera_parameters(params, allow_arbitrary=True)
 # ------------------------------------
 
 # ========================================================
-# 3. THE VOIDX SEMANTIC JURISDICTION ZONES (CORE BODY ONLY)
+# 3. THE 3D_Autorigger_mediapipe SEMANTIC JURISDICTION ZONES (CORE BODY ONLY)
 # ========================================================
 SEMANTIC_ZONES = {
     # FRONT-FACING BONES (0° +/- 45°)
@@ -112,7 +112,7 @@ for angle in angles:
     vis.poll_events()
     vis.update_renderer()
     
-    # ALL OF THIS MUST BE INSIDE THE FOR LOOP (4 spaces)
+
     temp_img_path = f"temp_cortex_{angle}.png"
     vis.capture_screen_image(temp_img_path)
     
@@ -228,7 +228,7 @@ skel_min = skel_pts.min(axis=0)
 skel_max = skel_pts.max(axis=0)
 
 # --- THE CRANIAL OFFSET FIX ---
-# The AI's highest point is the nose. The mesh's highest point is the scalp.
+# The mediapipe's highest point is the nose. The mesh's highest point is the scalp.
 # We must mathematically project the top of the AI's head to prevent vertical stretching.
 nose_y = final_dna["pose"].get("nose", {}).get("y", skel_max[1])
 sh_L_y = final_dna["pose"].get("shoulder_L", {}).get("y", nose_y)
@@ -269,4 +269,4 @@ if "shoulder_L" in final_dna["pose"] and "shoulder_R" in final_dna["pose"]:
 with open('VOIDX_CORTEX_DNA.json', 'w') as f:
     json.dump(final_dna, f, indent=4)
 
-print("SUCCESS: VoidX Cortex Processing Complete with Pure Math.")
+print("SUCCESS: 3D_Autorigger_mediapipe's Cortex Processing Completed with Pure Math.")
