@@ -1,0 +1,145 @@
+The final Research project is research_LabF ; The original one will be the OResearch__LabC.html and research_LabD too . 
+We now succesfully created a perfect dotesd topology for our SMPLX integeration ! 
+We still needs some changes into the UI , it is terible , we need some more changes in the rig placement . 
+We still have not put this html over our website , so keep in mind this too !
+We also need to integerate this research with our Main project i.e VoidX_Project . 
+We got here two options : 1. To go through the backend  i.e using python and pytorch 
+           >>>>>>>  2. Front hand , by using Javascript and as our SaaS is all browser based , we wil go witht his first !! 
+
+...............................................................................................................
+We succcessfully done this experiments , we will continue this in morning !! 
+...............................................................................................................
+We have successfully created the skeleton here , we need to make it more precise for our SMPLX model!
+If your plan B will not work  i.e working with javascript , we will go with backend python !
+We havew successfully calculated the maths and proved that our maths is all fine , now we will use the real data and the SMPLX models 
+to get the final model. 
+>>>>>We are using python to reduce the enrgy function and the gradiant . 
+All varified , all the files and folders are all at their respective places . 
+We will run this cad_core_backend.py file and try to solve the installation problems associated with it 
+Errors are over now r>>>>>unning the epoch !!
+We proved that our maths is all good ...congrats 
+I got more twisted models , I need to fine grain my inputs . Need some neural training to my models . With an automated Rig 
+.............................................................................................................
+>>We have created some of the 3d models ,  but they are not folowing biological anatomy !
+...............................................................................................................
+>>We are gettingn better as we are increasing the penalities and strictness , but still we required some more refinements
+, I need to give more simple pose rich models to make the early maths upto the top knotch . 
+>>>Lokking for more simple poses ...
+We are changing the input mesh ...
+................................................................................................................
+We are getting a lot of problem while fixing the rig of the meshes 
+... for this we will train the model with the neural network containing the real knowledge about the anatomy of humans .
+...................................................................................................................
+
+We are doing a lot of progress in better pose and a real jason file with real datas !!
+
+We are left with two thing: >>>>1.Solving the random selection of epoch O
+                            >>>>2.Training the model with neural networks of Human anatomy O 
+
+
+WE tried solving the epoch problem , but this is not yet fully confirmed that we have solved the overall problem
+We tried some more like increasing the number of parameters from 10 to 200 butit got crashed due to the lite file downloaded over the hardware
+WE also tried to increase the number of selected rays from 1000 to 5000 but due to the other above constraints , we were not able to do that, we stoped at graph formation and now directed the whole focuse over the training 
+!!
+...................................................................................................................
+
+WE will focus over the training part ...\
+We will face a problem in future regarding the BAckend and frontend, We can not directly connect ourheavy pytorch with our javascript 
+...of our browser , so we will need a cloud GPU for this . This is not a big problem ,but as I am in my initial stage, I need to be 
+...quit take care of my overall budget ! 
+We will not focus over there first, that will be the last thing to do , we should focus over our training of our neural
+...network first with the most accurate datas ...
+1.Collecting datasets: This is creating problem ! We are not getting a perfect dataset for the training, we will find some 
+...some alternatives , we can use the open sourced models too ! But, they can not be used for commercial used , so for now..as i am making a protype 
+...i will use those for n ow , in future , for commercial use , i can hier the developers ...Godd go on ..
+Solution 1: Let us assume, I have a team of developers , who are speciallised in rigging and have a complete understanding of 
+... human anatomy which is used in our AAA industry. Now,if let say , we want every datas be legally mine and want the same SMPLX like 
+...models for my product , then what i would do ? I would instruct them to learn evry necessary info regarding the SMPLX models ,which they will use to 
+...create a replica. If this will be  possible , we will get ourown uncessored pdt. But, AS this is not reality,I am just an indivusal participant 
+...for this I will use SMPLX models For my prototype . >>>>>>>>>Final 
+Solution 2 : The next problem which is the most important and complex for our whole project i.e Rigging the
+ ...skelton of the BLOB. The only problem is the manual rigging , which is time taking and is not enough accurate 
+ ...for getting a bunch of parameters which can be feed to SMPLX models to give an accurate mesh to us . We can not use 
+ ...closed sources like Adobe's Maximo ,I am not even able to take help from the datasets of AMASS due to technical issues 
+ ...the only option left is to use the propriatory models of these big companies , which is good for our overall prototype and even 
+ ...feasible for our left time and for our budget . But,How? Let me findout ...
+
+...............................................................................................................
+1.1 Collecting the datas...USing the Google's Media pipe 
+
+...Working on older version as supported by open 3D
+...ML environment is all set 
+...We got holy grail for our whole model
+...we are currently facing theree issues when we are using the google's media pipeline , we will focus over them first as 
+...they are the biggest challenges for us , but not now , we will keep them for solving purpose,only after the some current problem!! 
+.......................................................................................................................
+
+1.2 solving three problems... Holyshit we got the perfect rig ..ye ye 
+we got the perfect rig in 2d , we still need to deploy that same logic into the 3d 
+We have applied a complex mathamatical logic in our pixels of 3d . We got the legs and hip right , but we still miss the 
+...logic to be used to solve the upper half !! 
+let us find out ... we tried our best to solve the rig problem of upper half , but as we have non-uniformity , we will not able to fire
+...the mathematical lasers directly to the upper half , we would need to find an another logic and maths . We have a option to try out i.e Mixamo, we will 
+... use there ring like rig which they used for the uploaded models .It is a manual work, we can not make it automated 
+...the reaon behind of not making it automatic is bcz this is the most important and the most sensitive part of our whole model and being cautios is all what we need . 
+Let us search ...
+1.we got the three stage architecutre here , we are working over the 1st one , right now , the point to note down is that we are 
+...running with the accuracy of 95 percentage , so it is all good , we have slayed the 2D , now it is time for the 3D 
+2.We are fixing the bagles in each indivisual parts ...
+We got the rig which is mathematically sorrounded at the center ...this is stil in 2d , we would need to develop a complex mathametics 
+....and we will go with the indivisual part logic.
+
+
+
+
+
+
+
+...................................................................................................
+
+
+We also have a general problem of not able to open two mp3 files at a time on to the same time >>>done 
+
+WE are moving toward a final web SaaS product : Python script does three things: it looks at the image (MediaPipe), it does the math (Trimesh), 
+...and it renders the result (Plotly). To put this on the web, we chop the engine into two halves:
+                        
+                        
+>>>>1. The Frontend (The Browser / JavaScript)...let us work here ... we are not changing anything in our previous models
+       ...Building the script..
+        1.2 creating a more user friendly env. 
+          >...we are getting a very accurate result witht he manual placements , we will make it more fined and user friendly ...               
+          >...yeah! We are doing great , ...      
+          >I have done a lot of imporvements in the rigging process , but still i need some more refinements ! 
+          >The left hand is all good,right hand needs a lot of improvements. other than this,Facial rigging and the fingers !  
+2.We have reached to our end . WE are left with the right hand , It seems that my model is not able to understand the location 
+...of my hand ,it even can not locate the shoulder of right hand . If i am able to correct this,the overall rigging would be completed ,next , i can move to raycasting part!
+
+       3Shoulders and the right hand of the 3D blob is all right , I am now facing the issues regarding the left hand's elbow and wrist , including fingers . 
+       >>>I am finding a general mathamatical script for overall blob , but i am getting failed or left with minute errors. 
+       >>>I should find a better expression and move on forward , otherwise ,I would left with a zero time for my ray casting and the backend , including the 
+       ....server setup ! 
+4.I will try two things today , the first is to fix the left hand's wrist and the elbow . And the second way is to find a solution which is more feasible and more mathematically inclined . This will help in the overall user experience . 
+...We will also test the GEMMA on the bedrock and on the studio's playground to test its capabilities . 
+5. I am taking help from the prevois research based models , for this new problem , but the interferences are getting even
+... worse as i am going forward . I should add some more complexities and some strict rules for getting a perfect model ! 
+
+                       
+                       
+                       
+                       
+                        >>>>2. The Backend (Python Server)>>>>
+
+
+
+
+virtual env: .\.venv\Scripts\activate 
+virtual env: .\old_python\Scripts\activate 
+python voidx_master_engine.py
+ python voidx_plotly_viewer.py
+
+
+ run the voidx_cortex_vision.py 
+ >>run voidx_frontend.html
+ >> run voidx_rig_viewer.py
+ >..last run voidx_rig_viewer.py 
+ 

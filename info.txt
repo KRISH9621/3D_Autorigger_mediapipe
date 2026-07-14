@@ -1,0 +1,10 @@
+for commmiting : git commit -m "Initial Commit"
+for final reflection :  git push
+
+
+
+step 1: for adding new : git add .
+next step 2:  git commit -m "gitignore"
+3 step : git config --global user.email "nandynasty4@gmail.com"
+4th : for commiting locally :  git commit -m "gitignore" 
+5th step :  git push --set-upstream origin main
