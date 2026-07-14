@@ -143,3 +143,6 @@ python voidx_master_engine.py
  >> run voidx_rig_viewer.py
  >..last run voidx_rig_viewer.py 
  
+
+ for a complete bigin : Remove-Item -Recurse -Force .git
+ 
