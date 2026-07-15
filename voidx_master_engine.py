@@ -7,7 +7,7 @@ import json
 import os
 import math
 
-print("VOIDX ENGINE: Igniting True X-Ray Core Architecture...")
+print("3D_Autorigger_mediapipe: Igniting True X-Ray Core Architecture...")
 
 # ========================================================
 # PHASE 1: DATA PREPARATION & HUMAN TRUST
@@ -48,7 +48,7 @@ pre_sh_R = dna["pose"].get("shoulder_R", {"x": -1.0})
 true_shoulder_width = abs(pre_sh_L["x"] - pre_sh_R["x"])
 if true_shoulder_width < 0.1: true_shoulder_width = 2.0 # Fallback
 
-# ---> NEW: We define the hierarchy OUTSIDE the loop so it only loads once <---
+# We define the hierarchy OUTSIDE the loop so it only loads once 
 kinematic_parents = {
     "wrist_L": "elbow_L", "elbow_L": "shoulder_L", "shoulder_L": "neck",
     "wrist_R": "elbow_R", "elbow_R": "shoulder_R", "shoulder_R": "neck",
@@ -59,7 +59,7 @@ kinematic_parents = {
 
 for bone_name in macro_bones:
     
-    # THE SURGICAL FIX: Left Elbow & Left Wrist
+    # THE FIX: Left Elbow & Left Wrist
     if bone_name in ["elbow_L", "wrist_L"] and bone_name in full_pins:
         target_x = full_pins[bone_name]['x']
         target_y = full_pins[bone_name]['y']
@@ -78,14 +78,14 @@ for bone_name in macro_bones:
         }
         continue
 
-    # ---> NEW: The upgraded raycast logic replaces the old block here <---
+    # The raycast logic
     if bone_name in dna["pose"]:
         target_x = dna["pose"][bone_name]['x']
         target_y = dna["pose"][bone_name]['y']
         fallback_z = dna["pose"][bone_name]['z']
         
         # --- THE SURFACE INITIALIZER FIX ---
-        # AI depth (fallback_z) is an illusion. If we raycast using it, we miss the mesh entirely.
+        # AI depth of mediapipe (fallback_z) is an illusion. If we raycast using it, we miss the mesh entirely.
         # We use the proximity engine FIRST to find the actual physical skin of the mesh.
         try:
             closest_init, _, _ = proximity_engine.on_surface(np.array([[target_x, target_y, fallback_z]]))
@@ -130,7 +130,7 @@ for bone_name in macro_bones:
                         valid_y_centers.append(bottom_y + (abs(top_y - bottom_y) * 0.5))
                 
                 if valid_y_centers:
-                    # Override the AI's Y with the true mathematical center of the mesh's arm height
+                    # Override the Mediapipe AI's Y with the true mathematical center of the mesh's arm height
                     target_y = sum(valid_y_centers) / len(valid_y_centers)
 
         # --- FIX 3: MICRO-GRID RAYCAST PADDING ---
@@ -279,7 +279,7 @@ def process_hand(side_prefix, hand_landmarks):
         if bone_name in full_pins:
             final_dna["pose"][bone_name] = full_pins[bone_name]
         else:
-            # 1. Extract the raw offsets directly from the AI's local coordinate system
+            # 1. Extract the raw offsets directly from the Mediapipe AI's local coordinate system
             offset_x = lm.x - ai_hand_wrist.x
             offset_y = lm.y - ai_hand_wrist.y
             offset_z = lm.z - ai_hand_wrist.z  # <-- RESTORE THE Z-DEPTH OFFSET!
