@@ -18,7 +18,7 @@ This repository contains the Python implementation of the **VoidX Engine** auto-
 
 ## 🚀 Running the Pipeline
 
-🧾### Prerequisites
+🧾Prerequisites
 Make sure you have Python 3.x installed. You will need the following libraries:
 ```bash
 #create virtual envirnoment
@@ -37,4 +37,7 @@ python run_voidx.py
 .
 .
 # Result
-HTML file showing the rigged model in plotly . 
+.
+.
+.
+debug_rig.html file showing the rigged model in plotly . 
