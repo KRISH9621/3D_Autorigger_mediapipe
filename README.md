@@ -33,3 +33,8 @@ pip install open3d trimesh mediapipe opencv-python numpy plotly
 .
 .
 python run_voidx.py
+.
+.
+.
+# Result
+HTML file showing the rigged model in plotly . 
