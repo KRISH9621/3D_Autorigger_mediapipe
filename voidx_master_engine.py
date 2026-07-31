@@ -199,18 +199,7 @@ for bone_name in macro_bones:
                 final_dna["pose"][bone_name] = {"x": float(target_x), "y": float(target_y), "z": float(safe_fallback_z)}
 
 
-# ========================================================
-# PHASE 3: TOES & FEET RESTORATION
-# ========================================================
-print("\nExecuting Phase 3: Restoring Feet & Toes...")
-feet_bones = ["heel_L", "heel_R", "foot_index_L", "foot_index_R"]
-for foot_bone in feet_bones:
-    if foot_bone in full_pins:
-        final_dna["pose"][foot_bone] = full_pins[foot_bone] 
-    elif foot_bone in dna["pose"]:
-        parent_ankle = "ankle_L" if "_L" in foot_bone else "ankle_R"
-        anchor_z = final_dna["pose"].get(parent_ankle, {}).get("z", 0)
-        final_dna["pose"][foot_bone] = {"x": dna["pose"][foot_bone]['x'], "y": dna["pose"][foot_bone]['y'], "z": anchor_z}
+
 # ========================================================
 # PHASE 4: THE INDEPENDENT DUAL-MACHINES (True Proportional Mapping)
 # ========================================================
@@ -275,6 +264,7 @@ def process_hand(side_prefix, hand_landmarks):
     # SHATTERING WALL 3: RELATIVE Z-DEPTH EXTRACTION
     # ========================zbfb ================================
     for i, lm in enumerate(hand_landmarks.landmark):
+        if i > 0: continue
         bone_name = f"{hand_joints[i]}_{side_prefix}"
         if bone_name in full_pins:
             final_dna["pose"][bone_name] = full_pins[bone_name]

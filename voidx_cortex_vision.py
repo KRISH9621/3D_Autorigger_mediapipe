@@ -49,7 +49,7 @@ fy = params.intrinsic.intrinsic_matrix[1, 1]
 # This mathematically flattens the perspective cone into a parallel cylinder
 scale_factor = 20.0
 params.intrinsic.set_intrinsics(1024, 1024, fx * scale_factor, fy * scale_factor, 512.0, 512.0)
-    # --- FIX START ---
+   
     # 1. Creating a writable copy of the matrix
 new_extrinsic = params.extrinsic.copy()
     
@@ -60,7 +60,7 @@ new_extrinsic[2, 3] *= scale_factor
     
     # 3. Update the parameter object with the new matrix
 params.extrinsic = new_extrinsic
-    # --- FIX END ---
+   
 ctr.convert_from_pinhole_camera_parameters(params, allow_arbitrary=True)
 # ------------------------------------
 
@@ -85,7 +85,7 @@ SEMANTIC_ZONES = {
     "ankle_L": [0, 180, 225, 270, 315]
 }
 
-# WE ONLY TRACK THE CORE 15 JOINTS. NO FACE, NO FINGERS, NO TOES.
+#  ONLY TRACK THE CORE 15 JOINTS. NO FACE, NO FINGERS, NO TOES.
 # This prevents hallucinated extremities from corrupting the global scale_factor.
 joint_names = [
     "nose", None, None, None, None, None, None,             # 0-6 (Face ignored)
@@ -128,7 +128,7 @@ for angle in angles:
         for idx, landmark in enumerate(results.pose_landmarks.landmark):
             if idx >= len(joint_names): continue
             
-            bone_name = joint_names[idx]
+            bone_name = joint_names[idx]    
             
             # Skip the None values (face, fingers, toes)
             if bone_name is None: continue 
@@ -153,7 +153,7 @@ for angle in angles:
 vis.destroy_window()
 
 # ========================================================
-# 4. DECOUPLED AXIS PROJECTION (The Mathematical Fix)
+# 4. DECOUPLED AXIS PROJECTION ( Mathematical Fix)
 # ========================================================
 print("Triangulating via Decoupled Axis Projection (with Oblique Z-Extraction)...")
 final_dna = {"pose": {}}
@@ -190,7 +190,7 @@ for bone_name, observations in fusion_vault.items():
     
     final_dna["pose"][bone_name] = {"x": true_x, "y": true_y, "z": true_z}
 # ========================================================
-# 4.5 KINEMATIC INHERITANCE (Fix for corrupted hands/toes)
+# 4.5 KINEMATIC INHERITANCE ( for hands/toes)
 # ========================================================
 kinematic_parents = {
     "wrist_L": "elbow_L", "wrist_R": "elbow_R",
