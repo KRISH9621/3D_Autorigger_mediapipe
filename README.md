@@ -1,10 +1,13 @@
-﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
+# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
-[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/) <!-- Note: Update this link once your paper is live! -->
+
+![Auto-rigging Banner](banner.png)
+
+[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/)
 
 Official code repository for the arXiv preprint: **"A Mathematical Approach for Auto-Rigging 3D Model Using 2D MediaPipe"**.
 
-This repository contains the Python implementation of the **mathmatical auto-rigging** ipeline. Unlike traditional methods that rely on probabilistic neural networks to guess 3D depth (Z-axis) from 2D images, this pipeline treats depth as a solvable geometric variable. By rotating a 3D mesh in front of an orthographic camera and applying trigonometric inversion, we achieve mathematically exact, volumetrically centered skeletal structures requiring zero training data.
+This repository contains the Python implementation of the **mathmatical auto-rigging** pipeline. Unlike traditional methods that rely on probabilistic neural networks to guess 3D depth (Z-axis) from 2D images, this pipeline treats depth as a solvable geometric variable[cite: 2]. By rotating a 3D mesh in front of an orthographic camera and applying trigonometric inversion, we achieve mathematically exact, volumetrically centered skeletal structures requiring zero training data.
 
 ---
 
@@ -15,6 +18,10 @@ This repository contains the Python implementation of the **mathmatical auto-rig
 *   **Anatomical Thickness Capping:** Prevents rays from bleeding through thin limbs (like wrists) into the torso behind them.
 
 ---
+##More Example: 
+![Auto-rigging Banner](model9_input.png)
+## To this 
+![Auto-rigging Banner](model9_side.png)
 
 ## 🚀 Running the Pipeline
 
@@ -48,4 +55,4 @@ Need 3D model named : male_t_pose.glb
 .
 .
 .
-debug_rig.html file showing the rigged model in plotly . 
+debug_rig.html file showing the rigged model in plotly .
