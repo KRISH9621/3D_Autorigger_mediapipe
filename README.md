@@ -18,10 +18,9 @@ This repository contains the Python implementation of the **mathmatical auto-rig
 *   **Anatomical Thickness Capping:** Prevents rays from bleeding through thin limbs (like wrists) into the torso behind them.
 
 ---
-##More Example: 
-![Auto-rigging Banner](model9_input.png)
-## To this 
-![Auto-rigging Banner](model9_side.png)
+## More Example: 
+<img src="example.png" alt=" Result" width="600">
+
 
 ## 🚀 Running the Pipeline
 
