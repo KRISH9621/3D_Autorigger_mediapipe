@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or our mathematical approach in your research, please cite it as below."
-authors:
+author:
   - family-names: "Maurya"
     given-names: "Krishnanand"
 title: "A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe"
@@ -9,7 +9,7 @@ date-released: 2026-08-04
 url: "https://github.com/YourUsername/YourRepositoryName"
 preferred-citation:
   type: article
-  authors:
+  author:
     - family-names: "Maurya"
       given-names: "Krishnanand"
   title: "A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe (MAAR 3D)"
