@@ -1,5 +1,6 @@
 ﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
+[Example.webm](https://github.com/user-attachments/assets/c5bece55-c9ef-4f76-8be5-9d8415cae97a)
 
 ![Auto-rigging Banner](banner.png)
 
@@ -29,9 +30,9 @@ This repository contains the Python implementation of the **MAR 3D** pipeline. U
    <img width="4000" height="2600" alt="collage (1)" src="https://github.com/user-attachments/assets/26926b17-5005-44c4-9dda-d54f81465a10" />
 
 ## ✒️Citation 
-     @software{maurya2026autorigging,
+     @software{Krishnanand2026autorigging,
       title={A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe}, 
-      author={Your Name and Co-authors},
+      author={Krishnanand},
       year={2026}
     }
 
