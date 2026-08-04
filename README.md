@@ -19,17 +19,20 @@ This repository contains the Python implementation of the **MAR 3D** pipeline. U
 
 ## 📜 License 
 
-This project is licensed under the [MIT License](LICENSE).
+### This project is licensed under the [MIT License](LICENSE).
 ---
-## More Example: 
 
-<img width="4000" height="2600" alt="collage (1)" src="https://github.com/user-attachments/assets/26926b17-5005-44c4-9dda-d54f81465a10" />
 
-## Citation 
+## ▶️ More Example: 
+
+   
+   <img width="4000" height="2600" alt="collage (1)" src="https://github.com/user-attachments/assets/26926b17-5005-44c4-9dda-d54f81465a10" />
+
+## ✒️Citation 
      @software{maurya2026autorigging,
       title={A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe}, 
       author={Your Name and Co-authors},
-      year={2026},
+      year={2026}
     }
 
 ## 🚀 Running the Pipeline
