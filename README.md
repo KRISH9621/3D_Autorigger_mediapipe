@@ -1,10 +1,13 @@
-﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
+# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
-[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/) <!-- Note: Update this link once your paper is live! -->
+
+![Auto-rigging Banner](banner.png)
+
+[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/)
 
 Official code repository for the arXiv preprint: **"A Mathematical Approach for Auto-Rigging 3D Model Using 2D MediaPipe"**.
 
-This repository contains the Python implementation of the **VoidX Engine** auto-rigging pipeline. Unlike traditional methods that rely on probabilistic neural networks to guess 3D depth (Z-axis) from 2D images, this pipeline treats depth as a solvable geometric variable. By rotating a 3D mesh in front of an orthographic camera and applying trigonometric inversion, we achieve mathematically exact, volumetrically centered skeletal structures requiring zero training data.
+This repository contains the Python implementation of the **MAR 3D** pipeline. Unlike traditional methods that rely on probabilistic neural networks to guess 3D depth (Z-axis) from 2D images, this pipeline treats depth as a solvable geometric variable[cite: 2]. By rotating a 3D mesh in front of an orthographic camera and applying trigonometric inversion, we achieve mathematically exact, volumetrically centered skeletal structures requiring zero training data.
 
 ---
 
@@ -14,9 +17,23 @@ This repository contains the Python implementation of the **VoidX Engine** auto-
 *   **Volumetric Master Engine:** Uses dynamic shoulder-width anchoring and micro-grid raycasting to perfectly center joints inside the mesh geometry.
 *   **Anatomical Thickness Capping:** Prevents rays from bleeding through thin limbs (like wrists) into the torso behind them.
 
+## 📜 License 
+
+This project is licensed under the [MIT License](LICENSE).
 ---
+## More Example: 
+
+<img width="4000" height="2600" alt="collage (1)" src="https://github.com/user-attachments/assets/26926b17-5005-44c4-9dda-d54f81465a10" />
+
+## Citation 
+     @software{maurya2026autorigging,
+      title={A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe}, 
+      author={Your Name and Co-authors},
+      year={2026},
+    }
 
 ## 🚀 Running the Pipeline
+
 
 🧾Prerequisites
 Make sure you have Python 3.x installed. You will need the following libraries:
@@ -24,8 +41,7 @@ Make sure you have Python 3.x installed. You will need the following libraries:
 #create virtual envirnoment
 .
 .
-pip install open3d trimesh mediapipe opencv-python numpy plotly
-.
+pip install open3d trimesh mediapipe opencv-python numpy plotly.
 .
 .
 #Run
@@ -48,4 +64,13 @@ Need 3D model named : male_t_pose.glb
 .
 .
 .
-debug_rig.html file showing the rigged model in plotly . 
+debug_rig.html file showing the rigged model in plotly .
+```
+# 📬 Contact
+For questions, collaboration, or feedback, please reach out:
+Email: nanddyasty@gmail.com
+
+GitHub: [@KRISH9621](https://github.com/KRISH9621/3D_Autorigger_mediapipe)
+
+
+
