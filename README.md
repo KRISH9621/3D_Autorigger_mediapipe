@@ -1,4 +1,4 @@
-# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
+﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
 
 ![Auto-rigging Banner](banner.png)
@@ -71,7 +71,7 @@ debug_rig.html file showing the rigged model in plotly .
 ```
 # 📬 Contact
 For questions, collaboration, or feedback, please reach out:
-Email: nanddyasty@gmail.com
+Email: nanddyasty5@gmail.com
 
 GitHub: [@KRISH9621](https://github.com/KRISH9621/3D_Autorigger_mediapipe)
 
