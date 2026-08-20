@@ -1,6 +1,10 @@
 ﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
-[Example.webm](https://github.com/user-attachments/assets/ab425c89-4b4d-4c36-933d-a4de9fc3146d)
+[Example.webm](https://github.com/user-attachments/assets/e7130336-2682-4382-9a6c-953cdf2357d4
+)
+
+
+
 
 
 
