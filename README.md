@@ -1,12 +1,22 @@
 ﻿# A Mathematical Approach for Auto-Rigging 3D Models Using 2D MediaPipe
 
-[Example.webm](https://github.com/user-attachments/assets/c5bece55-c9ef-4f76-8be5-9d8415cae97a)
+[Example.webm](https://github.com/user-attachments/assets/ab425c89-4b4d-4c36-933d-a4de9fc3146d)
+
+
 
 ![Auto-rigging Banner](banner.png)
 
 [![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/)
 
 Official code repository for the arXiv preprint: **"A Mathematical Approach for Auto-Rigging 3D Model Using 2D MediaPipe"**.
+
+
+
+
+
+
+
+
 
 This repository contains the Python implementation of the **MAR 3D** pipeline. Unlike traditional methods that rely on probabilistic neural networks to guess 3D depth (Z-axis) from 2D images, this pipeline treats depth as a solvable geometric variable[cite: 2]. By rotating a 3D mesh in front of an orthographic camera and applying trigonometric inversion, we achieve mathematically exact, volumetrically centered skeletal structures requiring zero training data.
 
